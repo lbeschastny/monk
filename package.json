@@ -14,12 +14,12 @@
   "dependencies": {
     "mongoskin": "1.4.1",
     "debug": "*",
-    "mpromise": "0.5.1"
+    "mpromise": "0.5.5"
   },
   "devDependencies": {
     "mocha": "*",
     "expect.js": "0.1.x",
-    "promises-aplus-tests": "2.0.x"
+    "promises-aplus-tests": "2.1.x"
   },
   "scripts": {
     "test": "make test"
