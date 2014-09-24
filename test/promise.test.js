@@ -11,23 +11,20 @@ describe('promise', function () {
   it('Promise#error', function () {
     var p = new Promise()
     p.error(function(){});
-    // 3 due to internal event listener
-    expect(p.emitter.listeners('reject').length).to.be(3);
+    expect(p.emitter.listeners('reject').length).to.be(1);
   });
 
   it('Promise#success', function () {
     var p = new Promise()
     p.success(function(){});
-    // 3 due to internal event listener
-    expect(p.emitter.listeners('fulfill').length).to.be(3);
+    expect(p.emitter.listeners('fulfill').length).to.be(1);
   });
 
   it('Promise#complete', function () {
     var p = new Promise()
     p.complete(function(){});
-    // 3 due to internal event listener
-    expect(p.emitter.listeners('reject').length).to.be(3);
-    expect(p.emitter.listeners('fulfill').length).to.be(3);
+    expect(p.emitter.listeners('reject').length).to.be(1);
+    expect(p.emitter.listeners('fulfill').length).to.be(1);
   });
 
   it('Promise#each', function () {
